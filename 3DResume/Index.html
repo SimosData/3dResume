@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Resume</title>
+  <!-- Link to external stylesheet -->
+  <link rel="stylesheet" href="style.css">
+  <!-- Three.js library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r150/three.min.js"></script>
+  <!-- GLTFLoader for model loading -->
+  <script src="https://cdn.jsdelivr.net/npm/three@0.150.0/examples/js/loaders/GLTFLoader.js"></script>
+  <!-- GSAP for smooth animations -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+</head>
+<body>
+  <header>
+    <h1 id="glitch-heading">My Resume!!</h1>
+  </header>
+
+  <!-- Main section with Three.js canvas -->
+  <div id="scene-container"></div>
+
+  <!-- Portfolio sections -->
+  <section id="projects">
+    <h2>Projects Showcase</h2>
+    <!-- Add project cards or details here -->
+    <div class="projects-grid">
+      <!-- Example project card -->
+      <div class="project-card">
+        <h3>Project Title</h3>
+        <p>Short description of the project.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <!-- Simple contact form -->
+    <form id="contact-form">
+      <input type="text" name="name" placeholder="Your Name" required/>
+      <input type="email" name="email" placeholder="Your Email" required/>
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <!-- Social links -->
+  <footer>
+    <ul class="social-links">
+      <li><a href="https://github.com/" target="_blank">GitHub</a></li>
+      <li><a href="https://linkedin.com/" target="_blank">LinkedIn</a></li>
+      <li><a href="https://twitter.com/" target="_blank">Twitter</a></li>
+      <li><a href="https://facebook.com/" target="_blank">Facebook</a></li>
+      <li><a href="https://instagram.com/" target="_blank">Instagram</a></li>
+      <li><a href="https://tiktok.com/" target="_blank">TikTok</a></li>
+      <li><a href="https://www.kik.com/" target="_blank">Kik</a></li>
+      <li><a href="https://twitch.tv/" target="_blank">Twitch</a></li>
+    </ul>
+  </footer>
+
+  <!-- Audio for ambient sound -->
+  <audio id="ambient-audio" src="futuristic-ambience.mp3" loop></audio>
+
+  <!-- Our custom script -->
+  <script src="script.js"></script>
+</body>
+</html>

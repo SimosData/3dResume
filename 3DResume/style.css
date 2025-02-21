@@ -1,0 +1,148 @@
+/* Global styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #0d0d0d;
+  font-family: 'Helvetica Neue', sans-serif;
+  color: #f0f0f0;
+  overflow-x: hidden;
+}
+
+/* Glitch effect for heading */
+#glitch-heading {
+  font-size: 3rem;
+  text-align: center;
+  position: relative;
+  margin-top: 20px;
+  color: #39ff14;
+}
+
+#glitch-heading::before,
+#glitch-heading::after {
+  content: "My 3D Portfolio";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  overflow: hidden;
+  clip: rect(0, 900px, 0, 0);
+}
+
+#glitch-heading::before {
+  left: 2px;
+  text-shadow: -2px 0 magenta;
+  animation: glitch1 2s infinite linear alternate-reverse;
+}
+
+#glitch-heading::after {
+  left: -2px;
+  text-shadow: -2px 0 cyan;
+  animation: glitch2 3s infinite linear alternate-reverse;
+}
+
+@keyframes glitch1 {
+  0% { clip: rect(42px, 9999px, 44px, 0); }
+  20% { clip: rect(12px, 9999px, 14px, 0); }
+  40% { clip: rect(82px, 9999px, 84px, 0); }
+  60% { clip: rect(22px, 9999px, 24px, 0); }
+  80% { clip: rect(62px, 9999px, 64px, 0); }
+  100% { clip: rect(32px, 9999px, 34px, 0); }
+}
+
+@keyframes glitch2 {
+  0% { clip: rect(12px, 9999px, 14px, 0); }
+  20% { clip: rect(62px, 9999px, 64px, 0); }
+  40% { clip: rect(22px, 9999px, 24px, 0); }
+  60% { clip: rect(82px, 9999px, 84px, 0); }
+  80% { clip: rect(32px, 9999px, 34px, 0); }
+  100% { clip: rect(42px, 9999px, 44px, 0); }
+}
+
+/* Three.js scene container */
+#scene-container {
+  width: 100vw;
+  height: 80vh;
+  display: block;
+}
+
+/* Sections styling */
+section {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.projects-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.project-card {
+  background: rgba(57, 255, 20, 0.1);
+  border: 1px solid #39ff14;
+  padding: 20px;
+  width: 250px;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+}
+
+/* Contact form */
+#contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#contact-form input,
+#contact-form textarea {
+  width: 80%;
+  max-width: 400px;
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #39ff14;
+  background: #1a1a1a;
+  color: #f0f0f0;
+  border-radius: 4px;
+}
+
+#contact-form button {
+  background: #39ff14;
+  color: #0d0d0d;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* Social links */
+footer {
+  padding: 20px;
+  text-align: center;
+  background: #1a1a1a;
+}
+
+.social-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.social-links li a {
+  color: #39ff14;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
